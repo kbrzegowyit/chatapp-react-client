@@ -1,0 +1,81 @@
+#container {
+    /* background-color: #59344F; */
+    color: #ffffff;
+    grid-area: 2 / 2 / 3 / 3;
+    padding: .5rem;
+}
+
+#panels {
+    display: grid;
+    grid-template: 5rem 1fr / .3fr 1fr;
+    height: 100%;
+}
+
+#left-panel-header {
+    background-color: #31363F;
+    background-image: linear-gradient(#222831, #070F2B);
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    margin-right: 5px;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    border: 0;
+    box-shadow: 1px 1px 1px gray;
+    padding: 1rem;
+}
+
+#right-panel-header {
+    background-color: #222831;
+    background-image: linear-gradient(#222831, #070F2B);
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    /* margin-bottom: 2px; */
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+    border: 0;
+    /* box-shadow: 1px 1px 1px gray; */
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+#left-panel {
+    /* background-color: #31363F; */
+    background: #232526;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #232526, #414345);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #232526, #414345);
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    height: 100%;
+    text-align: justify;
+    margin-right: 5px;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    /* box-shadow: 1px 1px 1px gray; */
+    /* padding: 1rem; */
+    box-sizing: border-box;
+}
+
+#right-panel {
+    /* background-color: #31363F; */
+    /* background-image: linear-gradient(to top, #31363F, #313635); */
+    background: #232526;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #232526, #414345);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #232526, #414345);
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    height: 100%;
+    position: relative;
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    /* box-shadow: 1px 1px 1px gray; */
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.header {
+    border-bottom: 1px solid #f0f0f0;
+}

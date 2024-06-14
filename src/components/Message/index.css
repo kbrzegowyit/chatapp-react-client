@@ -1,0 +1,28 @@
+.message {
+    padding: 5px;
+    max-width: 50%;
+    margin-bottom: 10px;
+}
+
+.message-date {
+    font-size: .8rem;
+    color: #fefefe;
+    display: block;
+}
+
+.user-message {
+    align-self: flex-start;
+    background-color: #135D66;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.contact-message {
+    align-self: flex-end;
+    background-color: #3C5B6F;
+    /* border-top-right-radius: 30px 20px; */
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-top-left-radius: 15px;
+}

@@ -5,9 +5,18 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
+  margin: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#root {
+  /* background-color: #fefefe;  */
+  background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+  display: grid;
+  grid-template: .1fr 5fr .1fr / .1fr 5fr .1fr;
+  height: 100vh;
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-style: normal;
 }
