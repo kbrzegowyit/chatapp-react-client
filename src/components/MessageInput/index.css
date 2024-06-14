@@ -1,0 +1,28 @@
+.message-input {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+    display: flex;
+}
+
+.message-input textarea {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    resize: none;
+    width: 100%;
+    box-sizing: border;
+}
+
+.message-input textarea:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px #007bff;
+}

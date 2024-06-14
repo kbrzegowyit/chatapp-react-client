@@ -1,0 +1,16 @@
+.current-status {
+    flex-grow: 1;
+}
+
+.current-status-dot {
+    display: inline-block;
+    width: 10px;
+    /* adjust size as needed */
+    height: 10px;
+    /* adjust size as needed */
+    border-radius: 50%;
+    background-color: green;
+    margin-right: 5px;
+    /* adjust spacing as needed */
+    margin-left: 5px;
+}

@@ -1,0 +1,10 @@
+.current-contact {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.current-user-name {
+    flex-grow: 1;
+    font-weight: 700;
+}
