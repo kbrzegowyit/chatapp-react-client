@@ -1,18 +1,15 @@
-import { Component } from "react";
-import './index.css';
 import CurrentStatus from "../CurrentStatus";
+import './index.css';
 
-class CurrentContact extends Component {
-    render () {
-        return (
-            <div className="current-contact">
-                <div className='current-user-name'>
-                    To: John Doe
-                </div>
-                <CurrentStatus/>
-            </div>
-        )
-    }
+const CurrentContact = (props) => {
+    const { contact } = props;
+
+    return (
+        <div className="current-contact">
+            <div className='current-user-name'>To: {contact}</div>
+            <CurrentStatus/>
+        </div>
+    )
 }
 
 export default CurrentContact;

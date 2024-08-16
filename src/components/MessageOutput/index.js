@@ -1,16 +1,16 @@
-import { Component } from 'react';
 import Message from '../Message';
 import './index.css';
 
-class MessageOutput extends Component {
-    render() {
-        return (
-            <div className='message-output'>
-                <Message isMyMessage={true} />
-                <Message isMyMessage={false} />
-            </div>
-        )
-    }
+const MessageOutput = (props) => {
+    const { messages, user } = props;
+    
+    return (
+        <div className='message-output'>
+            {messages.map((msg, index) => (
+                <Message key={index} isMyMessage={msg.from === user.nick} msg={msg.content} />
+            ))}
+        </div>
+    )
 }
 
 export default MessageOutput;

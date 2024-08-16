@@ -9,7 +9,7 @@
     display: flex;
 }
 
-.message-input textarea {
+.message-input input {
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -21,7 +21,7 @@
     box-sizing: border;
 }
 
-.message-input textarea:focus {
+.message-input input:focus {
     outline: none;
     border-color: #007bff;
     box-shadow: 0 0 5px #007bff;
