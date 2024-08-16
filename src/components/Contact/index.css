@@ -1,15 +1,11 @@
 .contact {
     display: flex;
     flex-direction: column;
-    background-color: #76ABAE;
-    padding: 5px;
+    background: linear-gradient(-180deg, #BCC5CE 0%, #929EAD 98%), radial-gradient(at top left, rgba(255,255,255,0.30) 0%, rgba(0,0,0,0.30) 100%);
+    background-blend-mode: screen;
+    padding: 5px 5px 5px 16px;
     color: #070F2B;
     min-height: 3rem;
-    /* background-color: #1B1A55; */
-    /* background-image: linear-gradient(#35374B, #1B1A55);  */
-    box-shadow: 0px 0px 4px #76ABAE;
-    /* border-radius: 5px 5px; */
-    margin: 2px;
 }
 
 .contact:hover {

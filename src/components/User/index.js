@@ -1,18 +1,17 @@
-import { Component } from 'react';
-import './index.css';
 import CurrentStatus from '../CurrentStatus';
+import './index.css';
 
-class User extends Component {
-    render() {
-        return (
-            <div className="user">
-                <div className='user-name'>
-                    John Doe
-                </div>
-                <CurrentStatus/>
+const User = (props) => {
+    const { user } = props;
+
+    return (
+        <div className="user">
+            <div className='user-name'>
+                { user.nick }
             </div>
-        )
-    }
+            <CurrentStatus/>
+        </div>
+    )
 }
 
 export default User;

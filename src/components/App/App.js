@@ -1,29 +1,55 @@
-import './App.css';
-import User from '../User';
-import CurrentContact from '../CurrentContact';
-import ContactList from '../ContactList';
-import MessageOutput from '../MessageOutput';
-import MessageInput from '../MessageInput';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import Login from "../Login";
+import Register from "../Register";
+import Home from "../Home";
+import { useAuth, AuthProvider } from '../AuthProvider';
 
-function App() {
+const usePrivateRoute = () => {
+  const { getToken, isExpired, logout } = useAuth();
+  const token = getToken();
+  const expired = isExpired();
+
+  if (!token || expired) {
+    logout();
+    return <Navigate to='/login' />;
+
+  }
+  return null;
+}
+
+const useProtectAuth = () => {
+  const { getToken, isExpired, logout } = useAuth();
+  const token = getToken();
+  const expired = isExpired();
+
+  if (token && !expired) {
+    return <Navigate to='/' />;
+  }
+  return null;
+}
+
+const PrivateRoute = ({ element }) => {
+  const privateRoute = usePrivateRoute();
+  return privateRoute || element;
+}
+
+const ProtectAuth = ({ element }) => {
+  const protectAuth = useProtectAuth();
+  return protectAuth || element;
+}
+
+const App = () => {
+  console.log('App rendering');
   return (
-    <div id="container">
-      <div id="panels">
-        <div id="left-panel-header" className="header">
-          <User/>
-        </div>
-        <div id="right-panel-header" className="header">
-          <CurrentContact/>
-        </div>
-        <div id="left-panel">
-          <ContactList/>
-        </div>
-        <div id="right-panel">
-          <MessageOutput /> 
-          <MessageInput />
-        </div>
-      </div>
-    </div>
+    <AuthProvider>
+      <Router>
+        <Routes>
+          <Route path='/login' element={<ProtectAuth element={<Login />} />} />
+          <Route path='/register' element={<ProtectAuth element={<Register />} />} />
+          <Route path='/' element={<PrivateRoute element={<Home />} />} />
+        </Routes>
+      </Router>    
+    </AuthProvider>
   );
 }
 
