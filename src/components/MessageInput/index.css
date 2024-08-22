@@ -21,6 +21,11 @@
     box-sizing: border;
 }
 
+.message-input form {
+    display: flex;
+    width: 100%;
+}
+
 .message-input input:focus {
     outline: none;
     border-color: #007bff;

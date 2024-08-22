@@ -8,7 +8,8 @@ const MessageInput = ({ user, currentContact, setMessages, socket }) => {
     setCurrentMessage(e.target.value);
   }
 
-  const sendMessage = () => {
+  const sendMessage = (event) => {
+    event.preventDefault();
     if(!currentMessage.trim()) return;
 
     socket.emit('chat-message', {
@@ -25,13 +26,14 @@ const MessageInput = ({ user, currentContact, setMessages, socket }) => {
   }
   return (
     <div className="message-input">
-      <input
-        type="text"
-        value={currentMessage}
-        onChange={handleInputChange}
-        placeholder="Type a message..."
-      />
-      <button onClick={sendMessage}>Send</button>
+      <form onSubmit={sendMessage}>
+        <input
+          type="text"
+          value={currentMessage}
+          onChange={handleInputChange}
+          placeholder="Type a message..."
+        />
+      </form>
     </div>
   )
 }
