@@ -18,7 +18,7 @@ const usePrivateRoute = () => {
 }
 
 const useProtectAuth = () => {
-  const { getToken, isExpired, logout } = useAuth();
+  const { getToken, isExpired } = useAuth();
   const token = getToken();
   const expired = isExpired();
 
